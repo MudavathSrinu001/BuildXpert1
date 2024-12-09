@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #f39c12; /* Primary color for logo */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Space between navigation items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-item:hover {
+    color: #f39c12; /* Hover effect */
+}
+
+/* Add padding and some space for better look */
+.nav-item:not(:last-child) {
+    padding-right: 1rem;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh; /* Increased height for better visibility */
+    background: url('/jcb.webp') center/cover no-repeat;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #fff;
+    text-align: center;
+    margin-top: 4rem; /* Adjust for fixed header */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Slightly lighter overlay for visibility */
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+}
+
+.highlight {
+    color: #f39c12;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #f39c12;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Materials Info Section */
+/* Materials Info Section */
+/* Materials Info Section */
+.materials-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .materials-info .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .materials-info .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .materials-info .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .materials-info .btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  .materials-info .btn:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Detailed Material Display Section */
+  .material-details {
+    padding: 2rem 1rem;
+  }
+  
+  .material-details h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .material-details .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .material-details .card-body {
+    padding: 1.5rem;
+  }
+  
+  .material-details .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .material-details .card-footer {
+    background-color: #f9f9f9;
+  }
+  
+  .material-details .card-title {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .material-details .card-body p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .material-details .text-muted {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
+    .material-details .card-body p {
+      font-size: 0.9rem;
+    }
+  }
+  

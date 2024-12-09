@@ -1,0 +1,235 @@
+/* Main Container */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px); /* Frosted glass blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+/* Info Box Styling */
+.login-info-box,
+.register-info-box {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.login-info-box {
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+.register-info-box {
+  right: 0;
+  background: rgba(87, 59, 138, 0.8);
+  padding: 30px;
+}
+
+/* White Panel for Form */
+.white-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 10px;
+  transition: 0.5s;
+  z-index: 2;
+  backdrop-filter: blur(10px); /* Apply blur effect to form background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  padding: 20px;
+}
+
+.right-log {
+  left: 75%;
+}
+
+/* Toggle Buttons */
+.toggle-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toggle-container input[type="radio"] {
+  display: none;
+}
+
+.toggle-container label {
+  margin: 0 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.toggle-container input[type="radio"]:checked + label {
+  color: #573b8a;
+}
+
+/* Form Styling */
+h2 {
+  margin: 20px 0;
+  font-size: 1.8em;
+  color: #573b8a;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn {
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #573b8a;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #6d44b8;
+}
+
+/* Error Message */
+p {
+  color: red;
+  text-align: center;
+}
+
+/* Video Background */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Google Login Button Styles */
+.login-btn-container {
+  display: flex;
+  flex-direction: column; /* Align buttons vertically */
+  align-items: center; /* Center buttons */
+  gap: 15px; /* Add gap between buttons */
+  width: 100%;
+  max-width: 300px; /* Limit button container width */
+}
+
+.login-btn-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%; /* Make button width 100% of the container */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Google Icon and Text Alignment */
+.login-btn-red i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Hover effect */
+.login-btn-red:hover {
+  background-color: #357ae8;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus effect (on keyboard navigation) */
+.login-btn-red:focus {
+  outline: none;
+  border: 2px solid #357ae8;
+}
+
+/* Standard Login Button Styles */
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #573b8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%; /* Make button width 100% of the container */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Hover effect */
+.login-btn:hover {
+  background-color: #6d44b8;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus effect (on keyboard navigation) */
+.login-btn:focus {
+  outline: none;
+  border: 2px solid #6d44b8;
+}
+
+/* Other styles remain unchanged */
