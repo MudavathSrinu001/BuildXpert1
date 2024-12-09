@@ -8,10 +8,10 @@ app.use(bodyparser.json()); // Using JSON parsing instead of URL encoding for AP
 app.use(cors()); // Enables cross-origin requests, adjust as needed for production
 
 const connection = mysql.createConnection({
-  host: "sql12.freesqldatabase.com",
-  user: "sql12750775",
-  password: "3reqkDG2L8",
-  database: "sql12750775",
+  host: "database-1.cjomcak8k43d.ap-south-1.rds.amazonaws.com",
+  user: "admin",
+  password: "XDbWoRUVhJiMTMnLncRw",
+  database: "buildxpert",
 });
 
 // Connect to the database
