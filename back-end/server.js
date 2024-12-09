@@ -7,18 +7,11 @@ const app = express();
 app.use(bodyparser.json()); // Using JSON parsing instead of URL encoding for API consistency
 app.use(cors()); // Enables cross-origin requests, adjust as needed for production
 
-// const connection = mysql.createConnection({
-//   host: "sql12.freesqldatabase.com",
-//   user: "sql12749641",
-//   password: "Qx3C1vnNhg",
-//   database: "sql12749641",
-// });
-
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1234",
-  database: "project",
+  host: "sql12.freesqldatabase.com",
+  user: "sql12750775",
+  password: "3reqkDG2L8",
+  database: "sql12750775",
 });
 
 // Connect to the database
