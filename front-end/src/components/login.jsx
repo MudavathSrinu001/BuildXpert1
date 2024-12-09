@@ -23,7 +23,7 @@ function Login() {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5001/login', {
+      const response = await fetch('https://buildxpert1.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function Login() {
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5001/signup', {
+      const response = await fetch('https://buildxpert1.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
