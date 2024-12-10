@@ -18,30 +18,16 @@
   overflow: hidden;
   backdrop-filter: blur(10px); /* Frosted glass blur effect */
   -webkit-backdrop-filter: blur(10px); /* For Safari */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Ensure alignment is centered */
 }
 
-/* Info Box Styling */
+/* Remove Info Boxes (login or register prompts) */
 .login-info-box,
 .register-info-box {
-  position: absolute;
-  top: 50%;
-  width: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: #fff;
-  z-index: 1;
-}
-
-.login-info-box {
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-}
-
-.register-info-box {
-  right: 0;
-  background: rgba(87, 59, 138, 0.8);
-  padding: 30px;
+  display: none; /* Hides the sections */
 }
 
 /* White Panel for Form */
@@ -58,34 +44,11 @@
   z-index: 2;
   backdrop-filter: blur(10px); /* Apply blur effect to form background */
   -webkit-backdrop-filter: blur(10px); /* For Safari */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-}
-
-.right-log {
-  left: 75%;
-}
-
-/* Toggle Buttons */
-.toggle-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.toggle-container input[type="radio"] {
-  display: none;
-}
-
-.toggle-container label {
-  margin: 0 15px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #666;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.toggle-container input[type="radio"]:checked + label {
-  color: #573b8a;
 }
 
 /* Form Styling */
@@ -129,12 +92,6 @@ form {
   background: #6d44b8;
 }
 
-/* Error Message */
-p {
-  color: red;
-  text-align: center;
-}
-
 /* Video Background */
 .video-container {
   position: fixed;
@@ -152,21 +109,21 @@ p {
   object-fit: cover;
 }
 
-/* Google Login Button Styles */
+/* Adjustments for Buttons */
 .login-btn-container {
   display: flex;
-  flex-direction: column; /* Align buttons vertically */
-  align-items: center; /* Center buttons */
-  gap: 15px; /* Add gap between buttons */
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   width: 100%;
-  max-width: 300px; /* Limit button container width */
+  max-width: 300px;
 }
 
 .login-btn-red {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4285F4; /* Google Blue */
+  background-color: #4285f4;
   color: white;
   border: none;
   border-radius: 5px;
@@ -174,30 +131,16 @@ p {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  width: 100%; /* Make button width 100% of the container */
+  width: 100%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Google Icon and Text Alignment */
-.login-btn-red i {
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-/* Hover effect */
 .login-btn-red:hover {
   background-color: #357ae8;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Focus effect (on keyboard navigation) */
-.login-btn-red:focus {
-  outline: none;
-  border: 2px solid #357ae8;
-}
-
-/* Standard Login Button Styles */
 .login-btn {
   display: flex;
   align-items: center;
@@ -210,26 +153,64 @@ p {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  width: 100%; /* Make button width 100% of the container */
+  width: 100%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.login-btn i {
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-/* Hover effect */
 .login-btn:hover {
   background-color: #6d44b8;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Focus effect (on keyboard navigation) */
-.login-btn:focus {
-  outline: none;
-  border: 2px solid #6d44b8;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 400px;
+  }
+
+  .white-panel {
+    width: 90%;
+    height: auto;
+  }
+
+  .input-field {
+    width: 90%;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
+  .login-btn-container {
+    max-width: 280px;
+  }
 }
 
-/* Other styles remain unchanged */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    height: 350px;
+  }
+
+  .white-panel {
+    width: 95%;
+    height: auto;
+  }
+
+  .input-field {
+    width: 95%;
+  }
+
+  .btn {
+    width: 95%;
+  }
+
+  .login-btn-container {
+    max-width: 260px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
