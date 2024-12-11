@@ -79,7 +79,7 @@ const App = () => {
         <Route path="/details/:itemName" element={<Details />} /> 
       </Routes>
     </Router>
-    // </Auth0Provider>
+   </Auth0Provider>
   );
 };
 

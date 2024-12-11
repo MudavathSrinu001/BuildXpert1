@@ -30,38 +30,6 @@ const transportation = [
 ];
 
 
-
-const MaterialSearch = () => {
-  const [search, setSearch] = useState("");
-
-
-  const filteredMaterials = materials.filter((item) =>
-    item.toLowerCase().includes(search.toLowerCase())
-  );
-
-  return (
-    <div>
-      <h1>Material Search</h1>
-      <input
-        type="text"
-        placeholder="Search materials..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)} // Update search state
-      />
-      <ul>
-        {filteredMaterials.map((item, index) => (
-          <li key={index}>{item}</li> // Display filtered materials
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-
-
-
-
-
 const Home = () => {
   const { logout } = useAuth0();
   return (
@@ -203,20 +171,6 @@ const Home = () => {
             <li>Everything we recommend has a direct positive impact</li>
             <li>You will become an important partner of our company</li>
           </ul>
-          <div className="stat-list-container">
-            <div className="stat-item">
-              <p className="number">231</p>
-              <p>Happy Users</p>
-            </div>
-            <div className="stat-item">
-              <p className="number">121</p>
-              <p>Issues Solved</p>
-            </div>
-            <div className="stat-item">
-              <p className="number">149</p>
-              <p>Good Reviews</p>
-            </div>
-          </div>
         </div>
       </section>
 

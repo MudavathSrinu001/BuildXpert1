@@ -114,7 +114,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px; /* Add gap between buttons */
   width: 100%;
   max-width: 300px;
 }
@@ -160,6 +160,24 @@ form {
 
 .login-btn:hover {
   background-color: #6d44b8;
+}
+.auth {
+  margin-top: 10px; /* Adds space above the Google button section */
+  display: flex;
+  justify-content: center;
+}
+
+/* Form button adjustments */
+.btn {
+  margin-bottom: 10px; /* Adds space below the form button */
+}
+input[type="radio"] {
+  margin-right: 10px; /* Add space to the right of each radio button */
+  margin-bottom: 10px; /* Optional: add space below each radio button */
+}
+label {
+  margin-right: 20px; /* Add space between radio button and label */
+  margin-bottom: 10px; /* Add space between the radio button groups */
 }
 
 /* Responsive Adjustments */

@@ -22,35 +22,41 @@ const Details = () => {
     fetchItemDetails(); // Fetch item details on mount
   }, [itemName]);
 
+  // If itemDetails is still null, show "Loading..."
+  if (!itemDetails) {
+    return (
+      <div className="loading-page">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="details-page">
       <h2 className="details-title">{itemName.toUpperCase()} Details</h2>
-      {itemDetails ? (
-        <div className="details-container">
-          {itemDetails.map((detail, index) => (
-            <div key={index} className="detail-card">
-              <img src={detail.shopimage} alt={detail.shopname} className="card-image" />
-              <div className="card-info">
-                <h3 className="card-title">{detail.shopname}</h3>
-                <p className="card-location">
-                  Location: 
-                  <a 
-                    href={`https://www.google.com/maps?q=${encodeURIComponent(detail.location)}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    Map {/* Link text updated to display "Map" */}
-                  </a>
-                </p>
-                <p className="card-rating">Rating: {detail.rating}</p>
-                <p className="card-phone">Phone: {detail.phoneno}</p>
-              </div>
+      <div className="details-container">
+        {itemDetails.map((detail, index) => (
+          <div key={index} className="detail-card">
+            <img src={detail.shopimage} alt={detail.shopname} className="card-image" />
+            <div className="card-info">
+              <h3 className="card-title">{detail.shopname}</h3>
+              <p className="card-location">
+                Location: 
+                <a 
+                  href={`https://www.google.com/maps?q=${encodeURIComponent(detail.location)}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Map
+                </a>
+              </p>
+              <p className="card-rating">Rating: {detail.rating}</p>
+              <p className="card-phone">Phone: {detail.phoneno}</p>
             </div>
-          ))}
-        </div>
-      ) : (
-        <p>Loading details...</p>
-      )}
+          </div>
+        ))}
+      </div>
+      
     </div>
   );
 };

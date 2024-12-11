@@ -1,3 +1,10 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;  /* Ensure no horizontal overflow */
+}
 /* Main Details Container */
 .details-container {
   display: flex;
@@ -7,6 +14,9 @@
   background-color: #e9e4b7;
   padding: 20px;
   border-radius: 8px;
+  overflow-x: hidden; /* Hide horizontal overflow */
+
+  
 }
 
 /* Title Styling */
@@ -79,6 +89,14 @@
 
 .card-location a:hover {
   text-decoration: underline;
+}
+.loading-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Responsive Styles */

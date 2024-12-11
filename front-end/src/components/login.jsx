@@ -77,14 +77,7 @@ function Login() {
       </div>
 
       <div className="container">
-        <div className="login-info-box" style={{ display: isLogin ? 'none' : 'flex' }}>
-          <h2>Already have an account?</h2>
-          <p>Login to continue!</p>
-        </div>
-        <div className="register-info-box" style={{ display: isLogin ? 'flex' : 'none' }}>
-          <h2>Don't have an account?</h2>
-          <p>Sign up to get started!</p>
-        </div>
+
 
         <div className={`white-panel ${isLogin ? 'right-log' : ''}`}>
           <div className="toggle-container">
