@@ -465,6 +465,15 @@ h1 {
     background-position: center;
     padding: 5rem 20vw;
 }
+.transport-title {
+  font-size: 1.5rem; /* Adjust font size for better readability */
+  font-weight: bold; /* Make the text bold for emphasis */
+  color: #000; /* Set a visible color (black in this case) */
+  text-align: left; /* Align the text to the left */
+  margin-left: -1rem; /* Adjust position slightly for better alignment */
+  overflow: visible; /* Prevent any clipping */
+}
+
 
 .transportation h2 {
     color: #fff; /* White text */
@@ -765,6 +774,7 @@ p {
     font-size: 1.1em;
     color: #444;
   }
+  
   
   @media (max-width: 768px) {
     /* Tablet and Mobile Styling */
@@ -1378,4 +1388,132 @@ footer .Copyright {
   }
   
 
+  @media (max-width: 768px) {
+    .transportation {
+      padding: 3rem 5vw; /* Reduce padding for smaller screens */
+      background-size: cover;
+    }
   
+    .transportation h2 {
+      font-size: 1.5rem; /* Slightly smaller heading */
+      margin-bottom: 2rem;
+    }
+  
+    .transportation .transport-card {
+      flex-direction: column; /* Stack content vertically */
+      gap: 1rem;
+      margin-bottom: 2rem; /* Reduce margin between cards */
+      padding: 1rem; /* Maintain padding */
+    }
+  
+    .transportation .transport-card:nth-child(even) {
+      flex-direction: column; /* Same direction for all rows */
+    }
+  
+    .transportation .transport-image {
+      width: 100%; /* Full width image */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .transportation .transport-details {
+      max-width: 100%; /* Expand details to full width */
+      text-align: center; /* Center-align details */
+    }
+  
+    .transportation .transport-details h3 {
+      font-size: 1.25rem; /* Smaller heading size */
+      margin-bottom: 0.75rem;
+    }
+  
+    .transportation .transport-details p {
+      font-size: 0.9rem; /* Reduce paragraph font size */
+      margin-bottom: 0.75rem;
+    }
+  
+    .transportation .transport-details li {
+      font-size: 0.85rem; /* Smaller list items */
+    }
+  
+    .transportation .button-container {
+      margin-top: 0.75rem; /* Adjust spacing */
+    }
+  
+    .transportation .view-details-button {
+      font-size: 0.9rem; /* Smaller button font */
+      padding: 0.4rem 0.8rem; /* Adjust button size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .transportation {
+      padding: 2rem 2vw; /* Further reduce padding for very small screens */
+    }
+  
+    .transportation h2 {
+      font-size: 1.25rem; /* Adjust heading size further */
+    }
+  
+    .transportation .view-details-button {
+      width: 100%; /* Full-width button for small screens */
+      padding: 0.5rem 0; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Initially hide the nav list */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* Show the nav list when the hamburger is clicked */
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-item {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .nav-item a,
+    .nav-item button {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+        padding: 0.75rem;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 3px;
+        background: #333;
+        border-radius: 5px;
+    }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .nav-item a,
+    .nav-item button {
+        font-size: 1rem; /* Reduce font size for very small screens */
+        padding: 0.5rem;
+    }
+}
